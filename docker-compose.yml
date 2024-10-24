@@ -4,9 +4,9 @@ services:
   db:
     image: postgres:latest
     environment:
-      POSTGRES_USER: your_user
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database
+      POSTGRES_USER: cmt
+      POSTGRES_PASSWORD: kali
+      POSTGRES_DB: test
     ports:
       - "5432:5432"
     volumes:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://your_user:your_password@db:5432/your_database
+      DATABASE_URL: postgres://cmt:kali@db:5432/test
 
 volumes:
   pg_data:
